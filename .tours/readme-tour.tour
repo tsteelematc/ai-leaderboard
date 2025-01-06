@@ -3,16 +3,19 @@
   "title": "readme-tour",
   "steps": [
     {
-      "title": "What's going on here...",
-      "description": "This is...\n\n. JSON export of first chat with Copilot\n\n. Creates as TS version of leadeboard code\n\n. Then gets Python version\n\n. Then nudges Python version, hmm...\n\n. Search for `\"text\":` from top to bottom to see the prompts : - )",
+      "description": "# What's going on here...\n\nThis is...\n\n. JSON export of first chat with Copilot\n\n. Creates as TS version of leadeboard code\n\n. Then gets Python version\n\n. Then nudges Python version, hmm...\n\n. Search for `\"text\":` from top to bottom to see the prompts : - )",
       "file": "chat.json",
       "line": 1
     },
     {
-      "title": "Starting with shape of game results...",
       "file": "ai-leaderboard.ts",
-      "description": "Here is the original data \"shape\" that I fed to Copilot to generate a leaderboard function...",
+      "description": "# Starting with shape of game results...\n\nHere is the original data \"shape\" that I fed to Copilot to generate a leaderboard function...",
       "line": 1
+    },
+    {
+      "file": "ai-leaderboard.ts",
+      "description": "# Some sort details...\n\nI liked the way it generated `sort()` code ultimately... No `(1000 * AVG) + # GAMES` i-o-g\n\n: - O",
+      "line": 129
     }
   ],
   "isPrimary": true
