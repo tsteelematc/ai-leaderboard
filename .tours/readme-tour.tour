@@ -21,6 +21,11 @@
       "file": "ai-leaderboard.py",
       "description": "# I specifically like...\n\nThe way it used `lambda` and ternaries in the Python code...\n\nTernaries FTW ! ! !",
       "line": 141
+    },
+    {
+      "file": "ai-leaderboard.py",
+      "description": "# And I nudged...\n\n...into trailing commas for Black + Prettier formatting\n\n: - ))",
+      "line": 158
     }
   ],
   "isPrimary": true
