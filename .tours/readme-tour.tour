@@ -14,8 +14,13 @@
     },
     {
       "file": "ai-leaderboard.ts",
-      "description": "# Some sort details...\n\nI liked the way it generated `sort()` code ultimately... No `(1000 * AVG) + # GAMES` i-o-g\n\n: - O",
+      "description": "# Some `sort()` details...\n\nI liked the way it generated `sort()` code ultimately... No `(1000 * AVG) + # GAMES` i-o-g\n\n: - O",
       "line": 129
+    },
+    {
+      "file": "ai-leaderboard.py",
+      "description": "# I specifically like...\n\nThe way it used `lambda` and ternaries in the Python code...\n\nTernaries FTW ! ! !",
+      "line": 141
     }
   ],
   "isPrimary": true
