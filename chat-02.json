@@ -1,0 +1,1377 @@
+{
+  "requesterUsername": "tsteelematc",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/21085175",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_b3fdab20-0f6b-4717-85dd-791905d64a9d",
+      "message": {
+        "text": "What are alternatives to TypedDict for defining types?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 54
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 55
+            },
+            "text": "What are alternatives to TypedDict for defining types?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.selection",
+            "name": "file:ai-leaderboard.py",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 26,
+                "endLineNumber": 1,
+                "endColumn": 35,
+                "selectionStartLineNumber": 1,
+                "selectionStartColumn": 26,
+                "positionLineNumber": 1,
+                "positionColumn": 35
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Alternatives to ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "65bd81e7-f418-406e-b291-fc22de2c4753"
+        },
+        {
+          "value": " for defining types in Python include:\n\n1. **Dataclasses**: Use the `@dataclass` decorator to define classes with type annotations.\n2. **NamedTuples**: Use `collections.namedtuple` or `typing.NamedTuple` to define immutable types.\n3. **Pydantic Models**: Use the `pydantic` library to define data models with validation.\n4. **Regular Classes**: Use standard Python classes with type annotations.\n\nHere are examples of each:\n\n### Dataclasses\n```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass MyDataClass:\n    name: str\n    age: int\n```\n\n### NamedTuples\n```python\nfrom typing import NamedTuple\n\nclass MyNamedTuple(NamedTuple):\n    name: str\n    age: int\n```\n\n### Pydantic Models\n```python\nfrom pydantic import BaseModel\n\nclass MyPydanticModel(BaseModel):\n    name: str\n    age: int\n```\n\n### Regular Classes\n```python\nclass MyClass:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n```\n\nEach of these alternatives has its own use cases and benefits, depending on the requirements of your project.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_bc0573bc-aaba-4ca1-b31d-4629b65187e9",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 694,
+          "totalElapsed": 2979
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "from dataclasses import dataclass\n\n@dataclass\nclass MyDataClass:\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "Alternatives to `TypedDict` for defining types in Python include:\n\n1. **Dataclasses**: Use the `@dataclass` decorator to define classes with type annotations.\n2. **NamedTuples**: Use `collections.namedtuple` or `typing.NamedTuple` to define immutable types.\n3. **Pydantic Models**: Use the `pydantic` library to define data models with validation.\n4. **Regular Classes**: Use standard Python classes with type annotations.\n\nHere are examples of each:\n\n### Dataclasses\n"
+            },
+            {
+              "code": "from typing import NamedTuple\n\nclass MyNamedTuple(NamedTuple):\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### NamedTuples\n"
+            },
+            {
+              "code": "from pydantic import BaseModel\n\nclass MyPydanticModel(BaseModel):\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Pydantic Models\n"
+            },
+            {
+              "code": "class MyClass:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Regular Classes\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "What are alternatives to TypedDict for defining types?"
+            },
+            {
+              "role": "assistant",
+              "content": "Alternatives to `TypedDict` for defining types in Python include:\n\n1. **Dataclasses**: Use the `@dataclass` decorator to define classes with type annotations.\n2. **NamedTuples**: Use `collections.namedtuple` or `typing.NamedTuple` to define immutable types.\n3. **Pydantic Models**: Use the `pydantic` library to define data models with validation.\n4. **Regular Classes**: Use standard Python classes with type annotations.\n\nHere are examples of each:\n\n### Dataclasses\n```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass MyDataClass:\n    name: str\n    age: int\n```\n\n### NamedTuples\n```python\nfrom typing import NamedTuple\n\nclass MyNamedTuple(NamedTuple):\n    name: str\n    age: int\n```\n\n### Pydantic Models\n```python\nfrom pydantic import BaseModel\n\nclass MyPydanticModel(BaseModel):\n    name: str\n    age: int\n```\n\n### Regular Classes\n```python\nclass MyClass:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n```\n\nEach of these alternatives has its own use cases and benefits, depending on the requirements of your project."
+            }
+          ],
+          "modelMessageId": "d403b7e5-ced8-4254-a630-553bb18f8215",
+          "responseId": "1da7cc19-52fd-4b92-8372-03a2953e5362",
+          "sessionId": "4cb82a04-3888-4962-a33e-052e567ac534",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [
+        {
+          "kind": "reply",
+          "agentId": "github.copilot.default",
+          "message": "What are the benefits of each?"
+        }
+      ],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "tsteelematc",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/21085175",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 26,
+              "endLineNumber": 1,
+              "endColumn": 35
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735837795112
+    },
+    {
+      "requestId": "request_cb3cd2a5-12b2-40b6-8e32-920c6748c72a",
+      "message": {
+        "text": "Rank them in order of your preference please",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 44
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 45
+            },
+            "text": "Rank them in order of your preference please",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.selection",
+            "name": "file:ai-leaderboard.py",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 26,
+                "endLineNumber": 1,
+                "endColumn": 35,
+                "selectionStartLineNumber": 1,
+                "selectionStartColumn": 26,
+                "positionLineNumber": 1,
+                "positionColumn": 35
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here is my ranking of the alternatives to ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b1bbedee-33c8-4ddf-b411-736f3447f3c0"
+        },
+        {
+          "value": " in order of preference:\n\n1. **Dataclasses**: \n   - **Pros**: Easy to use, built-in to Python (since 3.7), supports default values, and provides a clear and concise syntax.\n   - **Cons**: Requires Python 3.7+.\n\n2. **Pydantic Models**:\n   - **Pros**: Provides data validation, parsing, and serialization out of the box. Very powerful for complex data structures.\n   - **Cons**: External dependency, can be overkill for simple use cases.\n\n3. **NamedTuples**:\n   - **Pros**: Immutable, lightweight, and built-in to Python.\n   - **Cons**: Less flexible than dataclasses, no default values, and less readable for complex structures.\n\n4. **Regular Classes**:\n   - **Pros**: Most flexible, no external dependencies.\n   - **Cons**: More boilerplate code, no built-in data validation or serialization.\n\nHere is an example of each:\n\n### Dataclasses\n```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass MyDataClass:\n    name: str\n    age: int\n```\n\n### Pydantic Models\n```python\nfrom pydantic import BaseModel\n\nclass MyPydanticModel(BaseModel):\n    name: str\n    age: int\n```\n\n### NamedTuples\n```python\nfrom typing import NamedTuple\n\nclass MyNamedTuple(NamedTuple):\n    name: str\n    age: int\n```\n\n### Regular Classes\n```python\nclass MyClass:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n```\n\nChoose the one that best fits your project's requirements.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_82294f92-c88e-426b-ad0a-47b634ed6842",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 591,
+          "totalElapsed": 5871
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "from dataclasses import dataclass\n\n@dataclass\nclass MyDataClass:\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "Here is my ranking of the alternatives to `TypedDict` in order of preference:\n\n1. **Dataclasses**: \n   - **Pros**: Easy to use, built-in to Python (since 3.7), supports default values, and provides a clear and concise syntax.\n   - **Cons**: Requires Python 3.7+.\n\n2. **Pydantic Models**:\n   - **Pros**: Provides data validation, parsing, and serialization out of the box. Very powerful for complex data structures.\n   - **Cons**: External dependency, can be overkill for simple use cases.\n\n3. **NamedTuples**:\n   - **Pros**: Immutable, lightweight, and built-in to Python.\n   - **Cons**: Less flexible than dataclasses, no default values, and less readable for complex structures.\n\n4. **Regular Classes**:\n   - **Pros**: Most flexible, no external dependencies.\n   - **Cons**: More boilerplate code, no built-in data validation or serialization.\n\nHere is an example of each:\n\n### Dataclasses\n"
+            },
+            {
+              "code": "from pydantic import BaseModel\n\nclass MyPydanticModel(BaseModel):\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Pydantic Models\n"
+            },
+            {
+              "code": "from typing import NamedTuple\n\nclass MyNamedTuple(NamedTuple):\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### NamedTuples\n"
+            },
+            {
+              "code": "class MyClass:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Regular Classes\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Rank them in order of your preference please"
+            },
+            {
+              "role": "assistant",
+              "content": "Here is my ranking of the alternatives to `TypedDict` in order of preference:\n\n1. **Dataclasses**: \n   - **Pros**: Easy to use, built-in to Python (since 3.7), supports default values, and provides a clear and concise syntax.\n   - **Cons**: Requires Python 3.7+.\n\n2. **Pydantic Models**:\n   - **Pros**: Provides data validation, parsing, and serialization out of the box. Very powerful for complex data structures.\n   - **Cons**: External dependency, can be overkill for simple use cases.\n\n3. **NamedTuples**:\n   - **Pros**: Immutable, lightweight, and built-in to Python.\n   - **Cons**: Less flexible than dataclasses, no default values, and less readable for complex structures.\n\n4. **Regular Classes**:\n   - **Pros**: Most flexible, no external dependencies.\n   - **Cons**: More boilerplate code, no built-in data validation or serialization.\n\nHere is an example of each:\n\n### Dataclasses\n```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass MyDataClass:\n    name: str\n    age: int\n```\n\n### Pydantic Models\n```python\nfrom pydantic import BaseModel\n\nclass MyPydanticModel(BaseModel):\n    name: str\n    age: int\n```\n\n### NamedTuples\n```python\nfrom typing import NamedTuple\n\nclass MyNamedTuple(NamedTuple):\n    name: str\n    age: int\n```\n\n### Regular Classes\n```python\nclass MyClass:\n    def __init__(self, name: str, age: int):\n        self.name = name\n        self.age = age\n```\n\nChoose the one that best fits your project's requirements."
+            }
+          ],
+          "modelMessageId": "d5bfd5f2-2297-4049-bdd8-e979443d0c8b",
+          "responseId": "609b8d8e-7010-4841-8ce2-30ea0ba7ea64",
+          "sessionId": "4cb82a04-3888-4962-a33e-052e567ac534",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "tsteelematc",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/21085175",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 26,
+              "endLineNumber": 1,
+              "endColumn": 35
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735837852099
+    },
+    {
+      "requestId": "request_e297aef7-ac9a-4f35-9069-40022d68ca7a",
+      "message": {
+        "text": "And where does TypedDict rank with these?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 41
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 42
+            },
+            "text": "And where does TypedDict rank with these?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.selection",
+            "name": "file:ai-leaderboard.py",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 26,
+                "endLineNumber": 1,
+                "endColumn": 35,
+                "selectionStartLineNumber": 1,
+                "selectionStartColumn": 26,
+                "positionLineNumber": 1,
+                "positionColumn": 35
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "250ee459-2910-4e61-aa89-2d79cfc5479a"
+        },
+        {
+          "value": " is a useful tool for defining dictionary-like structures with type annotations. Here is the updated ranking including ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d984fad0-85ce-4931-98ec-d44b1e9caf27"
+        },
+        {
+          "value": ":\n\n1. **Dataclasses**: \n   - **Pros**: Easy to use, built-in to Python (since 3.7), supports default values, and provides a clear and concise syntax.\n   - **Cons**: Requires Python 3.7+.\n\n2. **Pydantic Models**:\n   - **Pros**: Provides data validation, parsing, and serialization out of the box. Very powerful for complex data structures.\n   - **Cons**: External dependency, can be overkill for simple use cases.\n\n3. **TypedDict**:\n   - **Pros**: Built-in to Python (since 3.8), provides a way to define dictionary-like structures with type annotations, lightweight.\n   - **Cons**: Less flexible than dataclasses and Pydantic models, no built-in validation.\n\n4. **NamedTuples**:\n   - **Pros**: Immutable, lightweight, and built-in to Python.\n   - **Cons**: Less flexible than dataclasses, no default values, and less readable for complex structures.\n\n5. **Regular Classes**:\n   - **Pros**: Most flexible, no external dependencies.\n   - **Cons**: More boilerplate code, no built-in data validation or serialization.\n\nHere is an example of ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "8015dc1e-4539-4467-b897-ca3b47d5f2ae"
+        },
+        {
+          "value": ":\n\n### TypedDict\n```python\nfrom typing import TypedDict\n\nclass MyTypedDict(TypedDict):\n    name: str\n    age: int\n```\n\nChoose the one that best fits your project's requirements.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_551ef6b4-6d87-470e-9876-1177c92ce4f3",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 870,
+          "totalElapsed": 3898
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "from typing import TypedDict\n\nclass MyTypedDict(TypedDict):\n    name: str\n    age: int\n",
+              "language": "python",
+              "markdownBeforeBlock": "`TypedDict` is a useful tool for defining dictionary-like structures with type annotations. Here is the updated ranking including `TypedDict`:\n\n1. **Dataclasses**: \n   - **Pros**: Easy to use, built-in to Python (since 3.7), supports default values, and provides a clear and concise syntax.\n   - **Cons**: Requires Python 3.7+.\n\n2. **Pydantic Models**:\n   - **Pros**: Provides data validation, parsing, and serialization out of the box. Very powerful for complex data structures.\n   - **Cons**: External dependency, can be overkill for simple use cases.\n\n3. **TypedDict**:\n   - **Pros**: Built-in to Python (since 3.8), provides a way to define dictionary-like structures with type annotations, lightweight.\n   - **Cons**: Less flexible than dataclasses and Pydantic models, no built-in validation.\n\n4. **NamedTuples**:\n   - **Pros**: Immutable, lightweight, and built-in to Python.\n   - **Cons**: Less flexible than dataclasses, no default values, and less readable for complex structures.\n\n5. **Regular Classes**:\n   - **Pros**: Most flexible, no external dependencies.\n   - **Cons**: More boilerplate code, no built-in data validation or serialization.\n\nHere is an example of `TypedDict`:\n\n### TypedDict\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "And where does TypedDict rank with these?"
+            },
+            {
+              "role": "assistant",
+              "content": "`TypedDict` is a useful tool for defining dictionary-like structures with type annotations. Here is the updated ranking including `TypedDict`:\n\n1. **Dataclasses**: \n   - **Pros**: Easy to use, built-in to Python (since 3.7), supports default values, and provides a clear and concise syntax.\n   - **Cons**: Requires Python 3.7+.\n\n2. **Pydantic Models**:\n   - **Pros**: Provides data validation, parsing, and serialization out of the box. Very powerful for complex data structures.\n   - **Cons**: External dependency, can be overkill for simple use cases.\n\n3. **TypedDict**:\n   - **Pros**: Built-in to Python (since 3.8), provides a way to define dictionary-like structures with type annotations, lightweight.\n   - **Cons**: Less flexible than dataclasses and Pydantic models, no built-in validation.\n\n4. **NamedTuples**:\n   - **Pros**: Immutable, lightweight, and built-in to Python.\n   - **Cons**: Less flexible than dataclasses, no default values, and less readable for complex structures.\n\n5. **Regular Classes**:\n   - **Pros**: Most flexible, no external dependencies.\n   - **Cons**: More boilerplate code, no built-in data validation or serialization.\n\nHere is an example of `TypedDict`:\n\n### TypedDict\n```python\nfrom typing import TypedDict\n\nclass MyTypedDict(TypedDict):\n    name: str\n    age: int\n```\n\nChoose the one that best fits your project's requirements."
+            }
+          ],
+          "modelMessageId": "a491def9-f832-4baf-bf4a-3d4d4ae9be0c",
+          "responseId": "d90b2d63-afab-45a6-ad40-cb6032d55814",
+          "sessionId": "4cb82a04-3888-4962-a33e-052e567ac534",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "tsteelematc",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/21085175",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 26,
+              "endLineNumber": 1,
+              "endColumn": 35
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735837896461
+    },
+    {
+      "requestId": "request_43421691-417c-4deb-b540-fbfc3ad1596c",
+      "message": {
+        "text": "Can you explain python dict type hints?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 39
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 40
+            },
+            "text": "Can you explain python dict type hints?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "vscode.implicit.viewport",
+            "name": "file:ai-leaderboard.py",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 33,
+                "endColumn": 17
+              }
+            },
+            "isFile": true,
+            "isDynamic": true,
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Sure! In Python, type hints for dictionaries can be specified using the `Dict` type from the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "typing",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "7eecec75-6d77-463a-8d10-5c7486a3dc04"
+        },
+        {
+          "value": " module. This allows you to specify the types of the keys and values in the dictionary. Here are some examples and explanations:\n\n### Basic Dictionary Type Hint\n```python\nfrom typing import Dict\n\n# A dictionary with string keys and integer values\nmy_dict: Dict[str, int] = {\n    \"one\": 1,\n    \"two\": 2,\n    \"three\": 3\n}\n```\n\n### Nested Dictionary Type Hint\n```python\nfrom typing import Dict\n\n# A dictionary with string keys and values that are dictionaries with string keys and integer values\nnested_dict: Dict[str, Dict[str, int]] = {\n    \"outer_key\": {\n        \"inner_key1\": 1,\n        \"inner_key2\": 2\n    }\n}\n```\n\n### Using TypedDict for More Structured Dictionaries\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "1de4675f-7ced-4a6d-a387-a7308e5f87e4"
+        },
+        {
+          "value": " allows you to define a dictionary with a fixed set of keys, each with a specific type. This is useful for more structured data.\n\n```python\nfrom typing import TypedDict\n\nclass MyTypedDict(TypedDict):\n    name: str\n    age: int\n\n# A dictionary that must have the keys 'name' and 'age' with the specified types\nperson: MyTypedDict = {\n    \"name\": \"Alice\",\n    \"age\": 30\n}\n```\n\n### Example from Your Code\nIn your code, you have defined ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ResultItem",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 5,
+                "startColumn": 7,
+                "endLineNumber": 5,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f9e8691f-c983-4114-b9d3-811274c47b3a"
+        },
+        {
+          "value": " and ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "LeaderboardItem",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 7,
+                "endLineNumber": 16,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "91d346a1-4935-405d-9aee-1cedac54dd92"
+        },
+        {
+          "value": " using ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "c7b677c0-f8a9-4c4d-8aec-29520b90f2a8"
+        },
+        {
+          "value": ":\n\n```python\nfrom typing import List, TypedDict\n\nclass ResultItem(TypedDict):\n    winner: str\n    players: List[str]\n\nclass LeaderboardItem(TypedDict):\n    name: str\n    wins: int\n    losses: int\n    average: float\n\nresults: List[ResultItem] = [\n    {\n        \"winner\": \"Tom\",\n        \"players\": [\"Tom\", \"Taylor\"]\n    }\n]\n```\n\nHere, ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ResultItem",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 5,
+                "startColumn": 7,
+                "endLineNumber": 5,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f2381534-c29f-4098-b99c-a28dea85456b"
+        },
+        {
+          "value": " and ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "LeaderboardItem",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 7,
+                "endLineNumber": 16,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "0f169af5-967a-4708-84fb-bdde4510692f"
+        },
+        {
+          "value": " are structured dictionaries with specific keys and types. The ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "results",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 26,
+                "startColumn": 1,
+                "endLineNumber": 26,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "ffdf9a86-1e18-4b61-bba4-3aaa4408fad8"
+        },
+        {
+          "value": " variable is a list of ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ResultItem",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 5,
+                "startColumn": 7,
+                "endLineNumber": 5,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "5a98dae0-281a-48e4-a17b-26f08859c54e"
+        },
+        {
+          "value": " dictionaries, ensuring that each dictionary in the list conforms to the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ResultItem",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 5,
+                "startColumn": 7,
+                "endLineNumber": 5,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "8fe98629-c26d-4062-8c0f-ed1f8c13a517"
+        },
+        {
+          "value": " structure.\n\nUsing type hints and ",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "TypedDict",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2999,
+                "startColumn": 5,
+                "endLineNumber": 2999,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "external": "file:///Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "path": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "ea356075-57a9-4572-8dd5-b5ff096a7a98"
+        },
+        {
+          "value": " helps improve code readability and provides better type checking with tools like `mypy`.",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        }
+      ],
+      "responseId": "response_54d0d270-7cc9-4477-aa37-00c717d2b407",
+      "isHidden": false,
+      "result": {
+        "timings": {
+          "firstProgress": 1122,
+          "totalElapsed": 5913
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "from typing import Dict\n\n# A dictionary with string keys and integer values\nmy_dict: Dict[str, int] = {\n    \"one\": 1,\n    \"two\": 2,\n    \"three\": 3\n}\n",
+              "language": "python",
+              "markdownBeforeBlock": "Sure! In Python, type hints for dictionaries can be specified using the `Dict` type from the `typing` module. This allows you to specify the types of the keys and values in the dictionary. Here are some examples and explanations:\n\n### Basic Dictionary Type Hint\n"
+            },
+            {
+              "code": "from typing import Dict\n\n# A dictionary with string keys and values that are dictionaries with string keys and integer values\nnested_dict: Dict[str, Dict[str, int]] = {\n    \"outer_key\": {\n        \"inner_key1\": 1,\n        \"inner_key2\": 2\n    }\n}\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Nested Dictionary Type Hint\n"
+            },
+            {
+              "code": "from typing import TypedDict\n\nclass MyTypedDict(TypedDict):\n    name: str\n    age: int\n\n# A dictionary that must have the keys 'name' and 'age' with the specified types\nperson: MyTypedDict = {\n    \"name\": \"Alice\",\n    \"age\": 30\n}\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Using TypedDict for More Structured Dictionaries\n`TypedDict` allows you to define a dictionary with a fixed set of keys, each with a specific type. This is useful for more structured data.\n\n"
+            },
+            {
+              "code": "from typing import List, TypedDict\n\nclass ResultItem(TypedDict):\n    winner: str\n    players: List[str]\n\nclass LeaderboardItem(TypedDict):\n    name: str\n    wins: int\n    losses: int\n    average: float\n\nresults: List[ResultItem] = [\n    {\n        \"winner\": \"Tom\",\n        \"players\": [\"Tom\", \"Taylor\"]\n    }\n]\n",
+              "language": "python",
+              "markdownBeforeBlock": "\n### Example from Your Code\nIn your code, you have defined `ResultItem` and `LeaderboardItem` using `TypedDict`:\n\n"
+            }
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "content": "Can you explain python dict type hints?"
+            },
+            {
+              "role": "assistant",
+              "content": "Sure! In Python, type hints for dictionaries can be specified using the `Dict` type from the `typing` module. This allows you to specify the types of the keys and values in the dictionary. Here are some examples and explanations:\n\n### Basic Dictionary Type Hint\n```python\nfrom typing import Dict\n\n# A dictionary with string keys and integer values\nmy_dict: Dict[str, int] = {\n    \"one\": 1,\n    \"two\": 2,\n    \"three\": 3\n}\n```\n\n### Nested Dictionary Type Hint\n```python\nfrom typing import Dict\n\n# A dictionary with string keys and values that are dictionaries with string keys and integer values\nnested_dict: Dict[str, Dict[str, int]] = {\n    \"outer_key\": {\n        \"inner_key1\": 1,\n        \"inner_key2\": 2\n    }\n}\n```\n\n### Using TypedDict for More Structured Dictionaries\n`TypedDict` allows you to define a dictionary with a fixed set of keys, each with a specific type. This is useful for more structured data.\n\n```python\nfrom typing import TypedDict\n\nclass MyTypedDict(TypedDict):\n    name: str\n    age: int\n\n# A dictionary that must have the keys 'name' and 'age' with the specified types\nperson: MyTypedDict = {\n    \"name\": \"Alice\",\n    \"age\": 30\n}\n```\n\n### Example from Your Code\nIn your code, you have defined `ResultItem` and `LeaderboardItem` using `TypedDict`:\n\n```python\nfrom typing import List, TypedDict\n\nclass ResultItem(TypedDict):\n    winner: str\n    players: List[str]\n\nclass LeaderboardItem(TypedDict):\n    name: str\n    wins: int\n    losses: int\n    average: float\n\nresults: List[ResultItem] = [\n    {\n        \"winner\": \"Tom\",\n        \"players\": [\"Tom\", \"Taylor\"]\n    }\n]\n```\n\nHere, `ResultItem` and `LeaderboardItem` are structured dictionaries with specific keys and types. The `results` variable is a list of `ResultItem` dictionaries, ensuring that each dictionary in the list conforms to the `ResultItem` structure.\n\nUsing type hints and `TypedDict` helps improve code readability and provides better type checking with tools like `mypy`."
+            }
+          ],
+          "modelMessageId": "a81dbf35-9f2d-4967-aebe-e2c656720632",
+          "responseId": "95acbfa7-b949-463c-bddd-32cc7b0bc9cd",
+          "sessionId": "4cb82a04-3888-4962-a33e-052e567ac534",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "supportsSlowVariables": true,
+          "requester": {
+            "name": "tsteelematc",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/21085175",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "external": "file:///Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "path": "/Users/tsteele/Documents/ai-leaderboard/ai-leaderboard.py",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 33,
+              "endColumn": 17
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1735840839116
+    }
+  ]
+}
